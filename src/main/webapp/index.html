@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        p.small {
+            line-height: 0.7;
+        }
+    </style>
+    <head>
+        <title>Desafío Mercado Libre: Operación Fuego de Quasar</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Desafío Mercado Libre: Operación Fuego de Quasar</h1>
+        <h2>Sobre</h2>
+        <p>Este es un programa desarrollado para una prueba técnica de Mercado 
+            Libre. El programa consiste en interceptar la posición y el mensaje 
+            de una nave en el espacio mediante satélites. Los satélites son 
+            tres y sabemos las coordenadas de cada uno (todo sucede en un plano 
+            cartesiano), por nuestra parte debemos ingresar las distancias 
+            estimadas entre los satélites y la nave emisora del mensaje, al 
+            igual que el mensaje recibido por cada satélite (que es un
+            fragmento del mensaje original). De este modo podremos determinar 
+            tanto la ubicación como el mensaje completo de la nave.</p>
+        <h2>Como usar</h2>
+        <p>Debemos utilizar la herramienta web Postman y generar una petición HTTP 
+            de tipo POST a la dirección challengeMELI/api/topsecret con la 
+            siguiente información en el cuerpo de la petición:<p>
+        <p class="small">
+            <br>[</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "kenobi",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "skywalker",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "sato",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>
+            <br>]</br>
+        </p>
+        <p>Sin modificar el formato, cambiamos la distancia al emisor estimada de cada satélite por otro número real, y dentro de las comillas en negrita 
+        ingresamos cada palabra del mensaje que recibieron como a continuación:</p>
+        <p class="small">
+            <br>[</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "kenobi",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 663.4,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["este", "", "", "mensaje", ""]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "skywalker",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 264.7,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["", "es", "", "", "secreto"]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "sato",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 447.7,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["este", "", "un", "", ""]</br>
+                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>
+            <br>]</br>
+        </p>
+        <p>Luego de ingresar esta información obtendremos (si es posible) la localización de la nave y el mensaje esperado.</p>
+        <p>También es posible ingresar los datos para cada satélite de forma individual. Para ello, debemos generar una petición POST a la dirección
+            challengeMELI/api/topsecret_split/<b>nombredelsatelite</b> con el siguiente formato:</p>
+        <p class="small">
+            <br>{</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+            <br>}</br>
+        </p>
+        <h2>Herramientas utilizadas</h2>
+        <p class="small"><br>Apache NetBeans IDE 12.6 (entorno de desarrollo)</br>
+            <br>Java Development Kit 8 (para programar en Java)</br>
+            <br>Java EE Web Api 7.0 (para crear la aplicación Web)</br>
+            <br>Postman API Platform (para generar las peticiones HTTP en formato JSON)</br>
+            <br>Oracle Glassfish Server (para probar el programa fuera de línea)</br>
+            <br>Geogebra Calculator Suite (para poder verificar los resultados del algoritmo matemático del programa)</br> 
+        </p>
+        <h2>Autor</h2>
+        <p>Este código fue escrito en el año 2022 por Federico Milesi.</p> 
+    </body>
+</html>
