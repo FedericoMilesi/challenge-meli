@@ -17,9 +17,8 @@ In order to input the required data for the program to function, we have to send
 [
        {
             "nombre": "kenobi",
-            "distanciaAlEmisor": **0.0**,
+            "distanciaAlEmisor": __0.0__,
             "mensajeRecibido": **["", "", "", "", ""]**
-
        },
        {
             "nombre": "skywalker",
