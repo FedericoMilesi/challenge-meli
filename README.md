@@ -17,18 +17,18 @@ In order to input the required data for the program to function, we have to send
 [
        {
             "nombre": "kenobi",
-            "distanciaAlEmisor": __0.0__,
-            "mensajeRecibido": **["", "", "", "", ""]**
+            "distanciaAlEmisor": 0.0,
+            "mensajeRecibido": ["", "", "", "", ""]
        },
        {
             "nombre": "skywalker",
-            "distanciaAlEmisor": **0.0**,
-            "mensajeRecibido": **["", "", "", "", ""]**
+            "distanciaAlEmisor": 0.0,
+            "mensajeRecibido": ["", "", "", "", ""]
        },
        {
             "nombre": "sato",
-            "distanciaAlEmisor": **0.0**,
-            "mensajeRecibido": **["", "", "", "", ""]**
+            "distanciaAlEmisor": 0.0,
+            "mensajeRecibido": ["", "", "", "", ""]
        }
 ]
 ```
