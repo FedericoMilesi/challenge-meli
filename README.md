@@ -12,9 +12,9 @@ http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/
 
 ## Tools Used for Coding and Testing
 
-- Apache NetBeans IDE 12.6
+- Apache NetBeans IDE 12.6 (to create, edit and test the Maven web app project)
 - Java Development Kit 8
 - Java EE Web API 7
-- Oracle GlassFish Server
+- Oracle GlassFish Server 5 (to run the app offline)
 - The Postman API Platform
-- Geogebra Calculator Suite
+- Geogebra Calculator Suite (to verify the accuracy of the trilateration algorithm)
