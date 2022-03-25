@@ -13,7 +13,8 @@ http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/
 In order to input the required data for the program to function, we have to send a POST request to http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/challengeMELI/api/topsecret with the following JSON format info in the request's body:
 
 
-```[
+```
+[
        {
             "nombre": "kenobi",
             "distanciaAlEmisor": **0.0**,
@@ -30,7 +31,8 @@ In order to input the required data for the program to function, we have to send
             "distanciaAlEmisor": **0.0**,
             "mensajeRecibido": **["", "", "", "", ""]**
        }
-]```
+]
+```
 
 ## Tools Used for Coding and Testing
 
