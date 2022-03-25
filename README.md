@@ -60,6 +60,6 @@ Afterwards without modifying the name fields at all, we change the values of the
 - Apache NetBeans IDE 12.6 (to create, edit and test the Maven web app project)
 - Java Development Kit 8
 - Java EE Web API 7
-- Oracle GlassFish Server 5 (to run the app offline on the IDE)
+- Oracle GlassFish Server 5 (to host the app offline on the IDE)
 - The Postman API Platform
 - Geogebra Calculator Suite (to verify the accuracy of the trilateration algorithm)
