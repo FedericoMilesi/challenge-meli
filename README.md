@@ -33,11 +33,33 @@ In order to input the required data for the program to function, we have to send
 ]
 ```
 
+Afterwards without modifying the name fields at all, we change the values of the fields corresponding to the estimated distance between the satellites and the spaceship with other real numbers of our choosing, and on the fields below with the empty quotes we add the words of the message as obtained by each one of the satellites, like in this example:
+
+```
+[
+       {
+            "nombre": "kenobi",
+            "distanciaAlEmisor": 663.4,
+            "mensajeRecibido": ["este", "", "", "mensaje", ""]
+       },
+       {
+            "nombre": "skywalker",
+            "distanciaAlEmisor": 264.7,
+            "mensajeRecibido": ["", "es", "", "", "secreto"]
+       },
+       {
+            "nombre": "sato",
+            "distanciaAlEmisor": 447.7,
+            "mensajeRecibido": ["este", "", "un", "", ""]
+       }
+]
+```
+
 ## Tools Used for Coding and Testing
 
 - Apache NetBeans IDE 12.6 (to create, edit and test the Maven web app project)
 - Java Development Kit 8
 - Java EE Web API 7
-- Oracle GlassFish Server 5 (to run the app offline)
+- Oracle GlassFish Server 5 (to run the app offline on the IDE)
 - The Postman API Platform
 - Geogebra Calculator Suite (to verify the accuracy of the trilateration algorithm)
