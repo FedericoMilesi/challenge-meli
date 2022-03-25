@@ -6,6 +6,6 @@ The program's primary purpose is to intercept the location and the message of a 
 
 ## How to Use
 
-We need a tool like [Postman](https://www.postman.com/) to generate HTTP requests to the URL where the app is currently being hosted:
+We need a tool like [Postman](https://www.postman.com/) to generate HTTP requests to the URL of the site in which the app is currently being hosted:
 
 http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/
