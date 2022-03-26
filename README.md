@@ -55,6 +55,14 @@ Afterwards without modifying the name fields at all, we change the values of the
 ]
 ```
 
+If the request was sent without errors, you should get back a result similar to this one (which what you'll get after inputting the data of the above example):
+
+```
+x: 56.5
+y: 161.1
+mensaje: este es un mensaje secreto 
+```
+
 ## Tools Used for Coding and Testing
 
 - Apache NetBeans IDE 12.6 (to create, edit and test the Maven web app project)
