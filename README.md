@@ -55,7 +55,7 @@ Afterwards without modifying the name fields at all, we change the values of the
 ]
 ```
 
-If the request was sent without errors, you should get back a result similar to this one (which what you'll get after inputting the data of the above example):
+If the request was sent without errors, you should get a result similar to this one (which is what you'll get after inputting the data of the above example):
 
 ```
 x: 56.5
