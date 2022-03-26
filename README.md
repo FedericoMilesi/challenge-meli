@@ -55,7 +55,7 @@ Afterwards without modifying the name fields at all, we change the values of the
 ]
 ```
 
-If the POST request is then sent without any issues, you should get a result similar to this one (which is what you'll get after inputting the data of the above example):
+If the POST request is then sent without any issues, you should get a result similar to this one (which is what you'll get after inputting the data of the above example) with the location of the spaceship and the full message emitted by it:
 
 ```
 x: 56.5
