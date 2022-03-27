@@ -75,3 +75,7 @@ mensaje: este es un mensaje secreto
 - Oracle GlassFish Server 5 (to host the app offline for testing)
 - The Postman API Platform
 - Geogebra Calculator Suite (to verify the accuracy of the trilateration algorithm)
+
+## Cloud Platform
+
+The app environment is managed through the AWS Elastic Beanstalk orchestration service, and it is deployed with a Preconfigured Docker container (GlassFish 5.0 with Java 8 running on 64bit Amazon Linux).
