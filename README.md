@@ -12,9 +12,9 @@ The program's primary purpose is to intercept the location and the message of a 
 
 We need a tool like [Postman](https://www.postman.com/) to generate HTTP requests to the URL of the site in which the app is currently being hosted:
 
-http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/
+http://restful-meli.sa-east-1.elasticbeanstalk.com
 
-In order to input the required data for the program to function, we have to send a POST request to http://challenge-meli.eba-xbm2th2m.sa-east-1.elasticbeanstalk.com/api/topsecret with the following info in JSON format on the request's body:
+In order to input the required data for the program to function, we have to send a POST request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret with the following info in JSON format on the request's body:
 
 
 ```
