@@ -1,7 +1,7 @@
 # REST API for Mercado Libre's Technical Challenge
 
 <p align="center">
-  <img src="https://github.com/FedericoMilesi/restful-meli/blob/main/sat.png" alt=""/>
+  <img src="https://github.com/FedericoMilesi/restful-meli/blob/main/webapp/images/sat.png" alt=""/>
 </p>
 
 In February of this year, I developed a Java web app as part of a technical test for the E-commerce company Mercado Libre. I was applying for a BackEnd Java Developer position on the enterprise, and so the challenge consisted about building one REST API with Java and then hosting the web app on a cloud computing platform (I chose Amazon Web Services for the job). 
