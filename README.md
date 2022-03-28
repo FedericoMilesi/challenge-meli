@@ -67,6 +67,17 @@ y: 161.1
 mensaje: este es un mensaje secreto 
 ```
 
+It's also possible to enter the calculated distance from the ship and the collected message of a particular satellite by sending a POST request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be kenobi, skywalker or sato as those three are the only names available). Then the request body must be in JSON format and with the following structure:
+
+```
+{
+       "distanciaAlEmisor": 0.0,
+       "mensajeRecibido": ["", "", "", "", ""]
+}
+```
+
+After filling in the necessary data for each satellite with this method, you have to send a GET request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split to obtain the final result. 
+
 ## Tools Used for Coding and Testing
 
 - Apache NetBeans IDE 12.6 (to create, edit and test the Maven web app project)
