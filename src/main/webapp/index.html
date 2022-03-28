@@ -1,88 +1,190 @@
 <!DOCTYPE html>
 <html>
     <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 15%;
+        }   
+        a {
+            color: #D3D3D3;
+            text-shadow: 1px 1px 2px black, 0 0 25px #D3D3D3, 0 0 5px #C0C0C0;
+        }
+        body {
+            background-image: url('images/bg.png');
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        h1 {
+            font-size: 200%;
+            text-align: center;
+            text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+        }
+        h2 {
+            font-size: 175%;
+            text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+        }
+        p {
+            font-size: 150%;
+        }
+        p.notice {
+            font-size: 125%;
+            text-align: center;
+            text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkorange;
+        }
         p.small {
             line-height: 0.7;
+            text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+        }
+        ul {
+            font-size: 150%;
         }
     </style>
     <head>
-        <title>Desafío Mercado Libre: Operación Fuego de Quasar</title>
+        <title>REST API for Mercado Libre's Technical Challenge</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <h1>Desafío Mercado Libre: Operación Fuego de Quasar</h1>
-        <h2>Sobre</h2>
-        <p>Este es un programa desarrollado para una prueba técnica de Mercado 
-            Libre. El programa consiste en interceptar la posición y el mensaje 
-            de una nave en el espacio mediante satélites. Los satélites son 
-            tres y sabemos las coordenadas de cada uno (todo sucede en un plano 
-            cartesiano), por nuestra parte debemos ingresar las distancias 
-            estimadas entre los satélites y la nave emisora del mensaje, al 
-            igual que el mensaje recibido por cada satélite (que es un
-            fragmento del mensaje original). De este modo podremos determinar 
-            tanto la ubicación como el mensaje completo de la nave.</p>
-        <h2>Como usar</h2>
-        <p>Debemos utilizar la herramienta web Postman y generar una petición HTTP 
-            de tipo POST a la dirección challengeMELI/api/topsecret con la 
-            siguiente información en el cuerpo de la petición:<p>
+        <h1>REST API for Mercado Libre's Technical Challenge</h1>
+        <img src="images/sat.png" alt="" class="center">
+        <h2>About</h2>
+        <p>In February of this year, I developed a Java web app as part of a 
+            technical test for the E-commerce company Mercado Libre. I was 
+            applying for a BackEnd Java Developer position on the enterprise, 
+            and so the challenge consisted about building one REST API with Java
+            and then hosting the web app on a cloud computing platform (I chose 
+            Amazon Web Services for the job).
+
+            The program's primary purpose is to intercept the location and the 
+            message of a spaceship in distress through satellite communication. 
+            There are three satellites besides the ship and we know the X and Y 
+            coordinates of each one (the relevant area of space is represented 
+            by a cartesian plane), we just have to input our estimates of the 
+            distance between each one of the satellites and the spaceship, as 
+            well as the help message received by each satellite (which is just a
+            fragment of the actual message sent by the ship). Then if its 
+            possible, the program will determine both the location and the 
+            complete message of the endangered ship with the data entered.</p>
+        <h2>How to Use</h2>
+        <p>We need a tool like <a href="https://www.postman.com/">Postman</a> to 
+            generate HTTP requests to the URL of the site in which the app is 
+            currently being hosted:</p>
+        <p>http://restful-meli.sa-east-1.elasticbeanstalk.com</p>
+        <p>In order to input the required data for the program to function, we 
+            have to send a POST request to 
+            http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret 
+            with the following info in JSON format on the request's body:</p>
         <p class="small">
             <br>[</br>
                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "kenobi",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "kenobi",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": [<b>""</b>, <b>""</b>, <b>""</b>, 
+                     <b>""</b>, <b>""</b>]</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "skywalker",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "skywalker",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": [<b>""</b>, <b>""</b>, <b>""</b>, 
+                     <b>""</b>, <b>""</b>]</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "sato",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "sato",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": <b>0.0</b>,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": [<b>""</b>, <b>""</b>, <b>""</b>, 
+                     <b>""</b>, <b>""</b>]</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>
             <br>]</br>
         </p>
-        <p>Sin modificar el formato, cambiamos la distancia al emisor estimada de cada satélite por otro número real, y dentro de las comillas en negrita 
-        ingresamos cada palabra del mensaje que recibieron como a continuación:</p>
+        <p>Afterwards without modifying the name fields at all, we change the 
+            values of the fields corresponding to the estimated distance between
+            the satellites and the spaceship with other real numbers of our 
+            choosing, and on the fields below with the empty quotes we add the 
+            words of the message as obtained by each one of the satellites, like
+            in this example:</p>
         <p class="small">
             <br>[</br>
                 <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "kenobi",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 663.4,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["este", "", "", "mensaje", ""]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "kenobi",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": 663.4,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": ["this", "", "", "secret", ""]
+                     </br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "skywalker",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 264.7,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["", "es", "", "", "secreto"]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "skywalker",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": 264.7,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": ["", "is", "", "", "message"]</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp},</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"nombre": "sato",</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": 447.7,</br>
-                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": ["este", "", "un", "", ""]</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"name": "sato",</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"distanceFromShip": 447.7,</br>
+                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                     &nbsp"receivedMessage": ["this", "", "a", "", ""]</br>
                  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>
             <br>]</br>
         </p>
-        <p>Luego de ingresar esta información obtendremos (si es posible) la localización de la nave y el mensaje esperado.</p>
-        <p>También es posible ingresar los datos para cada satélite de forma individual. Para ello, debemos generar una petición POST a la dirección
-            challengeMELI/api/topsecret_split/<b>nombredelsatelite</b> con el siguiente formato:</p>
+        <p>If the POST request is then sent without any issues, you should get a
+            result similar to this one (which is what you'll get after inputting
+            the data of the above example) with the location of the spaceship 
+            and the full message emitted by it:</p>
+        <p class="small"><br>x: 56.5</br>
+        <br>y: 161.1</br>
+        <br>message: this is a secret message</br></p>
+        <p>It's also possible to enter the calculated distance from the ship and
+            the collected message of a particular satellite by sending a POST 
+            request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split/satellitename, 
+            replacing "satellitename" at the end
+            of the URL with the name of the satellite you want to add the data 
+            to (which can only be kenobi, skywalker or sato as those three are 
+            the only names available). Then the request body must be in JSON 
+            format and with the following structure:</p>
         <p class="small">
             <br>{</br>
-                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanciaAlEmisor": <b>0.0</b>,</br>
-                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"mensajeRecibido": [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"distanceFromShip": 
+                <b>0.0</b>,</br>
+                <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"receivedMessage": 
+                [<b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>, <b>""</b>]</br>
             <br>}</br>
         </p>
-        <h2>Herramientas utilizadas</h2>
-        <p class="small"><br>Apache NetBeans IDE 12.6 (entorno de desarrollo)</br>
-            <br>Java Development Kit 8 (para programar en Java)</br>
-            <br>Java EE Web Api 7.0 (para crear la aplicación Web)</br>
-            <br>Postman API Platform (para generar las peticiones HTTP en formato JSON)</br>
-            <br>Oracle Glassfish Server (para probar el programa fuera de línea)</br>
-            <br>Geogebra Calculator Suite (para poder verificar los resultados del algoritmo matemático del programa)</br> 
-        </p>
-        <h2>Autor</h2>
-        <p>Este código fue escrito en el año 2022 por Federico Milesi.</p> 
+        <p>After filling in the necessary data for each satellite with this 
+            method, you have to send a GET request to 
+            http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split 
+            to obtain the final result.</p>
+        <h2>Tools Used for Coding and Testing</h2>
+        <ul><li>Apache NetBeans IDE 12.6 (to create, edit and test the Maven web
+                app project)</li>
+            <li>Java Development Kit 8</li>
+            <li>Java EE Web API 7</li>
+            <li>Oracle GlassFish Server 5 (to host the app offline for testing)
+            </li>
+            <li>The Postman API Platform</li>
+            <li>Geogebra Calculator Suite (to verify the accuracy of the 
+                trilateration algorithm)</li>
+        </ul>
+        <h2>Cloud Hosting Platform</h2>
+        <p>The application environment is being managed with the AWS Elastic 
+            Beanstalk orchestration service, and the app is deployed through a 
+            Preconfigured Docker container (GlassFish 5.0 with Java 8 running on
+            64bit Amazon Linux).</p> 
+        <p class="notice">This software was coded by Backend Java Developer 
+            Federico Milesi on 2022.</p>
     </body>
 </html>
