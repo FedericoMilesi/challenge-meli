@@ -20,19 +20,19 @@ In order to input the required data for the program to function, we have to send
 ```
 [
        {
-            "nombre": "kenobi",
-            "distanciaAlEmisor": 0.0,
-            "mensajeRecibido": ["", "", "", "", ""]
+            "name": "kenobi",
+            "distanceFromShip": 0.0,
+            "receivedMessage": ["", "", "", "", ""]
        },
        {
-            "nombre": "skywalker",
-            "distanciaAlEmisor": 0.0,
-            "mensajeRecibido": ["", "", "", "", ""]
+            "name": "skywalker",
+            "distanceFromShip": 0.0,
+            "receivedMessage": ["", "", "", "", ""]
        },
        {
-            "nombre": "sato",
-            "distanciaAlEmisor": 0.0,
-            "mensajeRecibido": ["", "", "", "", ""]
+            "name": "sato",
+            "distanceFromShip": 0.0,
+            "receivedMessage": ["", "", "", "", ""]
        }
 ]
 ```
@@ -42,19 +42,19 @@ Afterwards without modifying the name fields at all, we change the values of the
 ```
 [
        {
-            "nombre": "kenobi",
-            "distanciaAlEmisor": 663.4,
-            "mensajeRecibido": ["este", "", "", "mensaje", ""]
+            "name": "kenobi",
+            "distanceFromShip": 663.4,
+            "receivedMessage": ["this", "", "", "secret", ""]
        },
        {
-            "nombre": "skywalker",
-            "distanciaAlEmisor": 264.7,
-            "mensajeRecibido": ["", "es", "", "", "secreto"]
+            "name": "skywalker",
+            "distanceFromShip": 264.7,
+            "receivedMessage": ["", "is", "", "", "message"]
        },
        {
-            "nombre": "sato",
-            "distanciaAlEmisor": 447.7,
-            "mensajeRecibido": ["este", "", "un", "", ""]
+            "name": "sato",
+            "distanceFromShip": 447.7,
+            "receivedMessage": ["this", "", "a", "", ""]
        }
 ]
 ```
@@ -64,15 +64,15 @@ If the POST request is then sent without any issues, you should get a result sim
 ```
 x: 56.5
 y: 161.1
-mensaje: este es un mensaje secreto 
+message: this is a secret message 
 ```
 
 It's also possible to enter the calculated distance from the ship and the collected message of a particular satellite by sending a POST request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be kenobi, skywalker or sato as those three are the only names available). Then the request body must be in JSON format and with the following structure:
 
 ```
 {
-       "distanciaAlEmisor": 0.0,
-       "mensajeRecibido": ["", "", "", "", ""]
+       "distanceFromShip": 0.0,
+       "receivedMessage": ["", "", "", "", ""]
 }
 ```
 
