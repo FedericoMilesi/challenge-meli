@@ -4,7 +4,7 @@
 
     <groupId>org.federicomilesi.rest</groupId>
     <artifactId>restful-meli</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <packaging>war</packaging>
 
     <name>REST API for Mercado Libre's Technical Challenge</name>
