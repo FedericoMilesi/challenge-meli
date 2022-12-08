@@ -12,9 +12,9 @@ The program's primary purpose is to intercept the location and the message of a 
 
 We need a tool like [Postman](https://www.postman.com/) to generate HTTP requests to the URL of the site in which the app is currently being hosted:
 
-http://restful-meli.sa-east-1.elasticbeanstalk.com
+[redacted]
 
-In order to input the required data for the program to function, we have to send a POST request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret with the following info in JSON format on the request's body:
+In order to input the required data for the program to function, we have to send a POST request to [redacted]/api/topsecret with the following info in JSON format on the request's body:
 
 
 ```
@@ -67,7 +67,7 @@ y: 161.1
 message: this is a secret message 
 ```
 
-It's also possible to enter the calculated distance from the ship and the collected message of a particular satellite by sending a POST request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be kenobi, skywalker or sato as those three are the only names available). Then the request body must be in JSON format and with the following structure:
+It's also possible to enter the calculated distance from the ship and the collected message of a particular satellite by sending a POST request to [redacted]/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be kenobi, skywalker or sato as those three are the only names available). Then the request body must be in JSON format and with the following structure:
 
 ```
 {
@@ -76,7 +76,7 @@ It's also possible to enter the calculated distance from the ship and the collec
 }
 ```
 
-After filling in the necessary data for each satellite with this method, you have to send a GET request to http://restful-meli.sa-east-1.elasticbeanstalk.com/api/topsecret_split to obtain the final result. 
+After filling in the necessary data for each satellite with this method, you have to send a GET request to [redacted]/api/topsecret_split to obtain the final result. 
 
 ## Tools Used for Coding and Testing
 
