@@ -4,15 +4,15 @@
   <img src="src/main/webapp/images/sat.png" alt=""/>
 </p>
 
-In February of this year, I developed a Java web app as part of a technical test for the E-commerce company Mercado Libre. I was applying for a BackEnd Java Developer position on the enterprise, and so the challenge consisted about building one REST API with Java and then hosting the web app on a cloud computing platform (I chose Amazon Web Services for the job). 
+In February of 2022, I developed a Java web app as part of a technical test for the E-commerce company Mercado Libre. The coding challenge consisted of building one REST API with Java and then hosting the resulting program on a cloud computing platform (I chose Amazon Web Services for the job, at the time). 
 
-The program's primary purpose is to intercept the location and the message of a spaceship in distress through satellite communication. There are three satellites besides the ship and we know the X and Y coordinates of each one (the relevant area of space is represented by a cartesian plane), we just have to input our estimates of the distance between each one of the satellites and the spaceship, as well as the help message received by each satellite (which is just a fragment of the actual message sent by the ship). Then if its possible, the program will determine both the location and the complete message of the endangered ship with the data entered.
+The program's primary purpose is to intercept the location and the message of a spaceship in distress through satellite communication. There are three satellites besides the ship and we know the X and Y coordinates of each one (the relevant area of space is represented by a cartesian plane), we just have to input our estimates of the distance between each one of the satellites and the spaceship, as well as the help message received by each satellite (which is just a fragment of the actual message sent by the ship). Then if possible with the data entered, the program will determine both the location and the complete message of the endangered ship.
 
 ## How to Use
 
 We need a tool like [Postman](https://www.postman.com/) to generate HTTP requests to the URL of the site in which the app is currently being hosted:
 
-[redacted]
+[redacted] (a link is no longer available due to the hosting service having been suspended since 2022, so the app only works when being hosted offline for the time being. Check the bottom of this page to know what server I used for that.) 
 
 In order to input the required data for the program to function, we have to send a POST request to [redacted]/api/topsecret with the following info in JSON format on the request's body:
 
