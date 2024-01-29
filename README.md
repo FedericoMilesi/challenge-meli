@@ -37,7 +37,7 @@ In order to input the required data for the program to function, we have to send
 ]
 ```
 
-Afterwards without modifying the name fields at all, we change the values of the fields corresponding to the estimated distance between the satellites and the spaceship with other real numbers of our choosing, and on the fields below with the empty quotes we add the words of the message as obtained by each one of the satellites, like in this example:
+Afterwards without modifying the "name" fields at all, we change the values of the fields corresponding to the estimated distance between the satellites and the spaceship ("distanceFromShip") with other real numbers of our choosing, and on the fields below with the empty quotes ("receivedMessage") we add the words of the message as obtained by each one of the satellites, like in this example:
 
 ```
 [
@@ -59,7 +59,7 @@ Afterwards without modifying the name fields at all, we change the values of the
 ]
 ```
 
-If the POST request is then sent without any issues, you should get a result similar to this one (which is what you'll get after inputting the data of the above example) with the location of the spaceship and the full message emitted by it:
+If the POST request is then sent without any issues, you should get a result similar to this one with the location of the spaceship and the full message emitted by it:
 
 ```
 x: 56.5
@@ -67,7 +67,7 @@ y: 161.1
 message: this is a secret message 
 ```
 
-It's also possible to enter the calculated distance from the ship and the collected message of a particular satellite by sending a POST request to [redacted]/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be kenobi, skywalker or sato as those three are the only names available). Then the request body must be in JSON format and with the following structure:
+It's also possible to enter the calculated distance from the ship and the gathered message of a particular satellite by sending a POST request to [redacted]/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be "kenobi", "skywalker" or "sato" as those three are the only names available). Then the request body must have the following structure:
 
 ```
 {
@@ -89,4 +89,4 @@ After filling in the necessary data for each satellite with this method, you hav
 
 ## Cloud Hosting Platform
 
-The application environment is being managed with the AWS Elastic Beanstalk orchestration service, and the app is deployed through a Preconfigured Docker container (GlassFish 5.0 with Java 8 running on 64bit Amazon Linux).
+The application environment was managed with the AWS Elastic Beanstalk orchestration service, and the app itself was deployed through a Preconfigured Docker container (GlassFish 5.0 with Java 8 running on 64bit Amazon Linux).
