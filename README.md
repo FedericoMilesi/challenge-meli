@@ -67,7 +67,7 @@ y: 161.1
 message: this is a secret message 
 ```
 
-It's also possible to enter the calculated distance from the ship and the gathered message of a particular satellite by sending a POST request to [redacted]/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be "kenobi", "skywalker" or "sato" as those three are the only names available). Then the request body must have the following structure:
+It's also possible to enter the calculated distance from the ship and the gathered message of a specific satellite by sending a POST request to [redacted]/api/topsecret_split/satellitename, replacing "satellitename" at the end of the URL with the name of the satellite you want to add the data to (which can only be "kenobi", "skywalker" or "sato" as those three are the only names available). Then the request body must have the following structure:
 
 ```
 {
